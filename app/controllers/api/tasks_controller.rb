@@ -1,5 +1,7 @@
 class Api::TasksController < ApplicationController
 
+    protect_from_forgery
+    
     def index
         @tasks = Task.order('updated_at DESC')
     end
