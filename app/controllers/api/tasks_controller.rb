@@ -1,4 +1,7 @@
 class Api::TasksController < ApplicationController
+    include Swagger::TasksApi
+
+    
 
     protect_from_forgery
     

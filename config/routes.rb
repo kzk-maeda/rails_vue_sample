@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   namespace :api, format: 'json' do
     resources :tasks, only: [:index, :create, :update]
   end
+
+  get '/api-docs', to: 'api_docs#index'
 end
